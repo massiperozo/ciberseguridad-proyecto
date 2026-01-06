@@ -101,6 +101,7 @@ Este proyecto fue hecho por:
 - Massiel Perozo 
 - Jorge Ramírez 
 - Valeria Riera
+
 Estudiantes del 7mo semestre de Ingenieria Informática de la Universidad Católica Andrés Bello
 
 
