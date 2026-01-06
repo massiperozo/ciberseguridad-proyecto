@@ -96,4 +96,12 @@ Bash
 
     loot.txt: El botín. Aquí se almacena cronológicamente todo lo escrito por la víctima.
 
+Este proyecto fue hecho por:
+- Luis Martín
+- Massiel Perozo 
+- Jorge Ramírez 
+- Valeria Riera
+Estudiantes del 7mo semestre de Ingenieria Informática de la Universidad Católica Andrés Bello
+
+
 ⚠️ AVISO LEGAL: Este proyecto es para fines estrictamente educativos y éticos. El uso de estas técnicas en sistemas sin autorización es ilegal.
